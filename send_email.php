@@ -1,6 +1,5 @@
 <?php
   session_start();
-
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\SMTP;
   use PHPMailer\PHPMailer\Exception;
@@ -10,7 +9,7 @@
 
   try {
       //Server settings
-      $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+      $mail->SMTPDebug = SMTP::DEBUG_OFF;                      // Enable verbose debug output
       $mail->isSMTP();                                            // Send using SMTP
       $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
       $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -30,7 +29,7 @@
       // Content
       $mail->isHTML(true);                                  // Set email format to HTML
       $mail->Subject = $_SESSION["datos"]["asunto"];
-      $mail->Body    = "Email: " . $_SESSION["datos"]["email"] . "<br><br>". $_SESSION["datos"]["mensaje"];
+      $mail->Body    = "Nombre: " . $_SESSION["datos"]["nombre"] . "<br>Email: " . $_SESSION["datos"]["email"] . "<br><br>". $_SESSION["datos"]["mensaje"];
       //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
       $mail->send();
