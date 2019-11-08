@@ -328,6 +328,10 @@ function validador(array $datos): array{
 				<div class="form-group">
 					<?php if ($_SESSION["ok"]): ?>
 						<div class="alert alert-success" role="alert">El correo se envio correctamente!</div>
+						<?php session_destroy(); ?>
+					<?php elseif($_SESSION["fatal_send_error"]): ?>
+					<div class="alert alert-danger" role="alert">El correo no se pudo enviar!</div>
+					<?php session_destroy(); ?>
 					<?php endif; ?>
 					<button href="#formulario" type="submit" name="submit" class="btn btn-primary">Enviar mensaje</button>
 				</div>
