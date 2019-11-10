@@ -19,8 +19,8 @@
       $mail->Port       = 587;                                    // TCP port to connect to
 
       //Recipients
-      $mail->setFrom('lazacrafter@gmail.com', $_SESSION["datos"]["nombre"]);
-      $mail->addAddress('lazarogabriel2000@gmail.com');     // Add a recipient
+      $mail->setFrom('consultas.lazzaro@aol.com', $_SESSION["datos"]["nombre"]);
+      $mail->addAddress('consultas.lazzaro@aol.com');     // Add a recipient
 
       // Attachments
       // $mail->addAttachment('/var/tmp/file.tar.gz');         ESTAS LINEAS SON PARA ENVIAR ARCHIVOS
