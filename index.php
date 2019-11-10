@@ -1,42 +1,12 @@
 <?php
 	session_start();
 
-	$name = "";
-	$email = "";
-	$asunto = "";
-	$mensaje = "";
-
 	if($_POST){
 		$_SESSION["ok"] = false;
-		$errores = validador($_POST);
 
-		if($_POST["nombre"])$name = $_POST["nombre"];
-		if($_POST["email"])$email = $_POST["email"];
-		if($_POST["asunto"])$asunto = $_POST["asunto"];
-		if($_POST["mensaje"])$mensaje = $_POST["mensaje"];
-
-		if(!count($errores)){
-			$_SESSION["datos"] = $_POST;
-			header("Location:send_email.php");
-		}
+		$_SESSION["datos"] = $_POST;
+		header("Location:send_email.php");
 	}
-
-
-function validador(array $datos): array{
-	$errores = [];
-
-	foreach($datos as $dato){
-		if(!is_array($dato))trim($dato);
-	}
-
-	if($datos["nombre"]=="")$errores["emptyName"] = true;
-	if(strlen($datos["nombre"]) < 5 || strlen($datos["nombre"]) > 30)$errores["lenNameError"] = true;
-	if(!filter_var($datos["email"], FILTER_VALIDATE_EMAIL))$errores["emailError"] = true;
-	if(!isset($datos["asunto"]) && empty($name))$errores["emptySubject"] = true;
-	if(strlen($datos["asunto"]) < 10 || strlen($datos["asunto"]) > 40)$errores["lenSubjectError"] = true;
-
-	return $errores;
-}
 
 ?>
 <!DOCTYPE HTML>
@@ -78,8 +48,8 @@ function validador(array $datos): array{
 									<li><a href="https://www.instagram.com/lazarasaza/"><i class="icon-instagram"></i></a></li>
 									<li><a href="https://github.com/lazarogabriel"><i class="icon-github"></i></a></li>
 									<li><a href="https://www.codewars.com/users/lazzaro"><i class="icon-code"></i></a></li>
-
 								</ul>
+								<button type="button" class="btn getcv-header"><a href="/cv_lazaro_onofre.pdf" style="color:white;font-family:'Sans';" download>GET CV</a></button>
 							</p>
 						</div>
 					</div>
@@ -106,7 +76,9 @@ function validador(array $datos): array{
 				</div>
 				<div class="col-md-8">
 					<h2>Historia academica</h2>
-					<p>Actualmente cursando la carrera de Licenciatura en Sistemas, a su vez realizando un curso de Desarrollo web full stack en Digital House. De carácter proactivo, me gustan los desafíos, resolver problemas y trabajar en equipo. Actualmente tengo conocimientos en desarrollo front y back end. Tecnologías: HTML5, CSS3, PHP, C, Bootstrap, MySQL (WorkBench). Metodologías ágiles: GIT y SCRUM.</p>
+					<p>
+						Actualmente cursando la carrera de Licenciatura en Sistemas, a su vez realizando un curso de Desarrollo web full stack en Digital House. De carácter proactivo, me gustan los desafíos, resolver problemas y trabajar en equipo. Actualmente tengo conocimientos en desarrollo front-end y back-end. Tecnologías: HTML5, CSS3, PHP(Laravel), C, Bootstrap, MySQL (WorkBench), manejo de repositorios GitHub. Metodologías ágiles: GIT y SCRUM.
+					</p>
 					<p>
 						<ul class="fh5co-social-icons">
 							<li><a href="https://facebook.com/lazarogaby"><i class="icon-facebook2"></i></a></d>
@@ -114,7 +86,9 @@ function validador(array $datos): array{
 							<li><a href="https://www.instagram.com/lazarasaza/"><i class="icon-instagram"></i></a></li>
 							<li><a href="https://github.com/lazarogabriel"><i class="icon-github"></i></a></li>
 							<li><a href="https://www.codewars.com/users/lazzaro"><i class="icon-code"></i></a></li>
+							<button style="font-family:'Sans';border-radius:0px;" type="button" class="btn getcv"><a href="/cv_lazaro_onofre.pdf" style="color:white;" download>GET CV</a></button>
 						</ul>
+
 					</p>
 				</div>
 			</div>
@@ -138,11 +112,11 @@ function validador(array $datos): array{
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">ARQCO Construcción S.A.S.</h3>
-									<span class="company">Desarrollo font y back end</span>
+									<h3 class="timeline-title">ArGames</h3>
+									<span class="company">Desarrollo front y back kend -Proyecto integrador academico</span>
 								</div>
 								<div class="timeline-body">
-									<p>diciembre de 2018 - febrero de 2019</p>
+									<p>agosto de 2019</p>
 								</div>
 							</div>
 						</li>
@@ -163,11 +137,11 @@ function validador(array $datos): array{
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">ArGames</h3>
-									<span class="company">Desarrollo front y back kend - En desarrollo</span>
+									<h3 class="timeline-title">ARQCO Construcción S.A.S</h3>
+									<span class="company">Desarrollo font y back end</span>
 								</div>
 								<div class="timeline-body">
-									<p>Proyecto integrador academico</p>
+									<p>diciembre de 2018 - febrero de 2019</p>
 								</div>
 							</div>
 						</li>
@@ -215,9 +189,9 @@ function validador(array $datos): array{
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					</div>
 				</div>
-				<div class="row">
+				<div class="row ">
 					<div class="col-md-4 col-xm-12 text-center">
-						<div class="feature-left">
+						<div class="feature-left " >
 							<span class="icon">
 								<i class="icon-paintbrush"></i>
 							</span>
@@ -302,27 +276,27 @@ function validador(array $datos): array{
 			<form action="" method="post" id="formulario">
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input name="nombre" value="<?=$name?>" type="text" id="name" class="form-control" placeholder="Introduzca su Nombre">
-						<?php if($errores["emptyName"]):?> <p class="text-danger">Debe ingresar un nombre</p><?php endif;?>
-						<?php if($errores["lenNameError"]): ?> <p class="text-danger">El nombre debe tener un minimo de 5 y un maximo de 30 caracteres.</p><?php endif;?>
+						<input name="nombre" value="<?=$_SESSION["datos"]["nombre"]?>" type="text" id="name" class="form-control" placeholder="Introduzca su Nombre">
+						<?php if($_SESSION["errores"]["emptyName"]):?> <p class="text-danger">Debe ingresar un nombre</p><?php endif;?>
+						<?php if($_SESSION["errores"]["lenNameError"]): ?> <p class="text-danger">El nombre debe tener un minimo de 5 y un maximo de 30 caracteres.</p><?php endif;?>
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input name="email" value="<?=$email?>" type="email" id="email" class="form-control" placeholder="Introduzca su Email">
-						<?php if($errores["emailError"]):?> <p class="text-danger">Debe ingresar un email valido.</p> <?php endif;?>
+						<input name="email" value="<?=$_SESSION["datos"]["email"]?>" type="email" id="email" class="form-control" placeholder="Introduzca su Email">
+						<?php if($_SESSION["errores"]["emailError"]):?> <p class="text-danger">Debe ingresar un email valido.</p> <?php endif;?>
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input name="asunto" value="<?=$asunto?>" type="text" id="subject" class="form-control" placeholder="Asunto">
-						<?php if($errores["lenSubjectError"]):?> <p class="text-danger">Debe ingresar un minimo de 10 y un maximo de 40 caracteres</p><?php endif;?>
-						<?php if($errores["emptySubject"]):?> <p class="text-danger">Debe ingresar un asunto.</p><?php endif;?>
+						<input name="asunto" value="<?=$_SESSION["datos"]["asunto"]?>" type="text" id="subject" class="form-control" placeholder="Asunto">
+						<?php if($_SESSION["errores"]["lenSubjectError"]):?> <p class="text-danger">Debe ingresar un minimo de 10 y un maximo de 40 caracteres</p><?php endif;?>
+						<?php if($_SESSION["errores"]["emptySubject"]):?> <p class="text-danger">Debe ingresar un asunto.</p><?php endif;?>
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-md-12">
-						<textarea name="mensaje" id="message" cols="30" rows="10" class="form-control" placeholder="Mensaje..."><?=$mensaje?></textarea>
+						<textarea name="mensaje" id="message" cols="30" rows="10" class="form-control" placeholder="Mensaje..."><?=$_SESSION["datos"]["mensaje"]?></textarea>
 					</div>
 				</div>
 				<div class="form-group">

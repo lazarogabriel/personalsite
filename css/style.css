@@ -45,6 +45,16 @@ body {
   background: rgba(0, 0, 0, 0.7);
   content: "";
 }
+.getcv-header{
+
+  margin-top:20px;
+  background-color: transparent;
+  border:1.4px solid rgba(212, 212, 212, 0.85);
+}
+.getcv{
+  background-color:#2F3C4F;
+  margin-top: 10px;
+}
 
 a {
   color: #000000;
@@ -509,7 +519,13 @@ h1, h2, h3, h4, h5, h6, figure {
     width: 85% !important;
   }
 }
+@media screen and (min-width: 384px) {
+  .getcv{
+    margin-top:-6px;
+  }
+}
 @media screen and (max-width: 480px) {
+
   .timeline > li > .timeline-panel {
     width: 75% !important;
   }
