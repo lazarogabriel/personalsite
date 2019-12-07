@@ -77,7 +77,8 @@
 				<div class="col-md-8">
 					<h2>Historia academica</h2>
 					<p>
-						Actualmente cursando la carrera de Licenciatura en Sistemas, a su vez realizando un curso de Desarrollo web full stack en Digital House. De carácter proactivo, me gustan los desafíos, resolver problemas y trabajar en equipo. Actualmente tengo conocimientos en desarrollo front-end y back-end. Tecnologías: HTML5, CSS3, PHP(Laravel), C, Bootstrap, MySQL (WorkBench), manejo de repositorios GitHub. Metodologías ágiles: GIT y SCRUM.
+				             Actualmente estoy cursando la carrera de Licenciatura en Sistemas, a su vez realizando un curso de Desarrollo web full stack en Digital House. De carácter proactivo y autodidacta, me gustan los desafíos, resolver problemas, trabajar en equipo y perfeccionarme daía a día
+Tengo conocimientos en desarrollo front-end y back-end. Tecnologías: HTML5, CSS3, JavaScript, PHP(Laravel), C,  Bootstrap, MySQL (WorkBench). Metodologías ágiles: GIT y SCRUM. Linux y Windows.
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">
