@@ -267,12 +267,12 @@
 					<a href="http://elahorcado.herokuapp.com/" class="work" style="background-image: url(images/elahorcado.jpg);">
 						 <div class="desc">
 							 <h3>El Ahorcado</h3>
-							 <span>App Web</span>
+							 <span>App/Game Web</span>
 						 </div>
 					 </a>
 				 </div>
 				 <div class="col-md-3 text-center col-padding animate-box">
-					 <a href="http://rubik-timer.herokuapp.com/" class="work" style="background-image: url(images/rubik_site.jpg);">
+					 <a href="https://www.rubiktimer.site/" class="work" style="background-image: url(images/rubik_site.jpg);">
 						 <div class="desc">
 							 <h3>Rubik Timer</h3>
 							 <span>App Web</span>
