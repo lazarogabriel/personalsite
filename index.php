@@ -272,7 +272,7 @@
 					 </a>
 				 </div>
 				 <div class="col-md-3 text-center col-padding animate-box">
-					 <a href="https://www.rubiktimer.site/" class="work" style="background-image: url(images/rubik_site.jpg);">
+					 <a href="https://www.rubiktimer.com/" class="work" style="background-image: url(images/rubik_site.jpg);">
 						 <div class="desc">
 							 <h3>Rubik Timer</h3>
 							 <span>App Web</span>
