@@ -77,8 +77,7 @@
 				<div class="col-md-8">
 					<h2>Historia academica</h2>
 					<p>
-				             Actualmente estoy cursando la carrera de Licenciatura en Sistemas. De carácter proactivo y autodidacta, me gustan los desafíos, resolver problemas, trabajar en equipo y perfeccionarme día a día
-. Tengo conocimientos en desarrollo front-end y back-end. Tecnologías: HTML5, CSS3 (Bootstrap), JavaScript, PHP(Laravel), C, C# (.NET), SQL (SSMS) y MySQL (WorkBench). Metodologías ágiles: GIT y SCRUM. Linux y Windows.
+					Actualmente estoy cursando la carrera de Licenciatura en Sistemas. De carácter proactivo y autodidacta, me gustan los desafíos, resolver problemas, trabajar en equipo y perfeccionarme día a día. Tengo conocimientos en desarrollo front-end y back-end. Tecnologías: HTML5, CSS3 (Bootstrap), JavaScript, PHP(Laravel), C, C# (.NET), SQL (SSMS) y MySQL (WorkBench). Metodologías ágiles: GIT y SCRUM. Linux y Windows.
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">
@@ -108,6 +107,18 @@
 					<ul class="timeline">
 						<li class="timeline-heading text-center animate-box">
 							<div><h3>Experiencia</h3></div>
+						</li>
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Goiar</h3>
+									<span class="company">Desrollador Web</span>
+								</div>
+								<div class="timeline-body">
+									<p>Enero 2020</p>
+								</div>
+							</div>
 						</li>
 						<li class="animate-box timeline-unverted">
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
@@ -159,7 +170,7 @@
 									<span class="company">Universidad Nacional de Lanus</span>
 								</div>
 								<div class="timeline-body">
-									<p>1º año - En curso (2019)</p>
+									<p>2º año - En curso (2019)</p>
 								</div>
 							</div>
 						</li>
